@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live News</title>
+</head>
+<body>
+    <h1>Live News Classification</h1>
+    <ul>
+        {% for news in news_articles %}
+            <li>
+                <h3>{{ news.title }}</h3>
+                <p>{{ news.content }}</p>
+                <strong>Status: {{ news.prediction }}</strong>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
